@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,9 +10,9 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
+
 <body>
 
-  <!-- LANDING -->
   <section id="landingScreen" class="screen active">
     <nav class="navbar navbar-expand-lg navbar-dark topbar sticky-top">
       <div class="container">
@@ -287,7 +288,6 @@
     </footer>
   </section>
 
-  <!-- LOGIN -->
   <section id="loginScreen" class="screen">
     <div class="auth-wrapper">
       <div class="container" style="max-width: 520px;">
@@ -319,7 +319,8 @@
             </div>
 
             <div class="text-end mb-4">
-              <a href="#" class="text-info text-decoration-none small" onclick="showScreen('forgotScreen')">¿Olvidaste tu contraseña?</a>
+              <a href="#" class="text-info text-decoration-none small" onclick="showScreen('forgotScreen')">¿Olvidaste
+                tu contraseña?</a>
             </div>
 
             <button class="btn btn-kairos w-100" type="submit">Iniciar sesión</button>
@@ -327,7 +328,8 @@
 
           <div class="text-center mt-4">
             <span class="muted">¿No tienes cuenta?</span>
-            <a href="#" class="text-info text-decoration-none fw-semibold" onclick="showScreen('registerScreen')"> Crear cuenta</a>
+            <a href="#" class="text-info text-decoration-none fw-semibold" onclick="showScreen('registerScreen')"> Crear
+              cuenta</a>
           </div>
 
           <div class="text-center mt-3">
@@ -340,60 +342,143 @@
     </div>
   </section>
 
-  <!-- REGISTER -->
   <section id="registerScreen" class="screen">
-    <div class="auth-wrapper">
-      <div class="container" style="max-width: 560px;">
-        <div class="glass-card p-4 p-md-5">
-          <div class="text-center mb-4">
-            <div class="brand-icon"><i class="bi bi-person-plus"></i></div>
-            <h2 class="fw-800 mb-2">Crear cuenta</h2>
-            <p class="muted mb-0">Regístrate para administrar campeonatos</p>
-          </div>
+    <div class="auth-wrapper register-sport-bg">
+      <div class="container" style="max-width: 1100px;">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-5">
+            <div class="register-side-panel h-100">
+              <span class="hero-badge mb-3">Únete a la competencia</span>
+              <h2 class="fw-800 mb-3">Crea tu cuenta y empieza a organizar torneos como un profesional</h2>
+              <p class="muted mb-4">
+                Diseñamos este acceso para que el usuario entienda rápido qué hacer, complete el registro sin fricción
+                y se sienta dentro de una plataforma deportiva moderna, dinámica y confiable.
+              </p>
 
-          <form id="registerForm">
-            <div class="row g-3">
-              <div class="col-12">
-                <label class="form-label">Nombre completo</label>
-                <input type="text" class="form-control" id="registerNombre" placeholder="Tu nombre" required>
-              </div>
-              <div class="col-md-6">
-                <label class="form-label">Correo</label>
-                <input type="email" class="form-control" id="registerEmail" placeholder="correo@ejemplo.com" required>
-              </div>
-              <div class="col-md-6">
-                <label class="form-label">Teléfono</label>
-                <input type="text" class="form-control" id="registerTelefono" placeholder="3001234567">
-              </div>
-              <div class="col-12">
-                <label class="form-label">Contraseña</label>
-                <div class="input-group">
-                  <input type="password" class="form-control" id="registerPassword" placeholder="Mínimo 6 caracteres" required>
-                  <button class="btn btn-outline-secondary" type="button" onclick="togglePassword('registerPassword', this)">
-                    <i class="bi bi-eye"></i>
-                  </button>
+              <div class="benefit-list d-grid gap-3">
+                <div class="benefit-item">
+                  <div class="benefit-icon"><i class="bi bi-trophy"></i></div>
+                  <div>
+                    <h6 class="mb-1 fw-bold">Crea campeonatos en minutos</h6>
+                    <small class="muted">Configura nombre, deporte, modalidad, fechas y estado desde un solo
+                      lugar.</small>
+                  </div>
+                </div>
+
+                <div class="benefit-item">
+                  <div class="benefit-icon"><i class="bi bi-people-fill"></i></div>
+                  <div>
+                    <h6 class="mb-1 fw-bold">Administra jugadores y equipos</h6>
+                    <small class="muted">Mantén toda la información del torneo clara, centralizada y
+                      actualizada.</small>
+                  </div>
+                </div>
+
+                <div class="benefit-item">
+                  <div class="benefit-icon"><i class="bi bi-graph-up-arrow"></i></div>
+                  <div>
+                    <h6 class="mb-1 fw-bold">Haz seguimiento del evento</h6>
+                    <small class="muted">Consulta avances, estados y resultados con una experiencia visual
+                      limpia.</small>
+                  </div>
                 </div>
               </div>
             </div>
-            <button class="btn btn-kairos w-100 mt-4" type="submit">Registrarme</button>
-          </form>
-
-          <div class="text-center mt-4">
-            <span class="muted">¿Ya tienes cuenta?</span>
-            <a href="#" class="text-info text-decoration-none fw-semibold" onclick="showScreen('loginScreen')"> Iniciar sesión</a>
           </div>
 
-          <div class="text-center mt-3">
-            <a href="#" class="text-decoration-none text-light" onclick="showScreen('landingScreen')">
-              <i class="bi bi-arrow-left me-1"></i>Volver al inicio
-            </a>
+          <div class="col-lg-7">
+            <div class="glass-card register-card p-4 p-md-5">
+              <div class="register-header text-center text-lg-start mb-4">
+                <div class="brand-icon register-brand"><i class="bi bi-person-plus"></i></div>
+                <span class="register-kicker">Registro de usuario</span>
+                <h2 class="fw-800 mb-2 mt-2">Empieza tu experiencia deportiva</h2>
+                <p class="muted mb-0">Completa los datos para acceder al panel y gestionar tus campeonatos.</p>
+              </div>
+
+              <div class="register-steps mb-4">
+                <div class="step-pill active"><span>1</span><small>Datos personales</small></div>
+                <div class="step-line"></div>
+                <div class="step-pill"><span>2</span><small>Acceso seguro</small></div>
+                <div class="step-line"></div>
+                <div class="step-pill"><span>3</span><small>Empezar</small></div>
+              </div>
+
+              <form id="registerForm">
+                <div class="row g-3">
+                  <div class="col-12">
+                    <label class="form-label">Nombre completo</label>
+                    <div class="input-group input-sport">
+                      <span class="input-group-text"><i class="bi bi-person"></i></span>
+                      <input type="text" class="form-control" id="registerNombre" placeholder="Ej: Emanuel Velasquez"
+                        required>
+                    </div>
+                    <small class="form-hint">Así aparecerás dentro del panel y en los eventos que administres.</small>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label">Correo electrónico</label>
+                    <div class="input-group input-sport">
+                      <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                      <input type="email" class="form-control" id="registerEmail" placeholder="correo@ejemplo.com"
+                        required>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label">Teléfono</label>
+                    <div class="input-group input-sport">
+                      <span class="input-group-text"><i class="bi bi-telephone"></i></span>
+                      <input type="text" class="form-control" id="registerTelefono" placeholder="3001234567">
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <label class="form-label">Contraseña</label>
+                    <div class="input-group input-sport">
+                      <span class="input-group-text"><i class="bi bi-shield-lock"></i></span>
+                      <input type="password" class="form-control" id="registerPassword"
+                        placeholder="Mínimo 6 caracteres" required>
+                      <button class="btn btn-outline-secondary" type="button"
+                        onclick="togglePassword('registerPassword', this)">
+                        <i class="bi bi-eye"></i>
+                      </button>
+                    </div>
+                    <div class="password-meter mt-3">
+                      <div class="password-bar level-1"></div>
+                      <div class="password-bar level-2"></div>
+                      <div class="password-bar level-3"></div>
+                    </div>
+                    <small class="form-hint">Usa una clave fácil de recordar para ti y difícil de adivinar para
+                      otros.</small>
+                  </div>
+                </div>
+
+                <div class="register-cta mt-4">
+                  <button class="btn btn-kairos w-100 btn-lg" type="submit">Crear mi cuenta</button>
+                  <p class="muted small text-center mt-3 mb-0">
+                    Al registrarte podrás crear torneos, visualizar estados y gestionar participantes.
+                  </p>
+                </div>
+              </form>
+
+              <div class="text-center mt-4">
+                <span class="muted">¿Ya tienes cuenta?</span>
+                <a href="#" class="text-info text-decoration-none fw-semibold" onclick="showScreen('loginScreen')">
+                  Iniciar sesión</a>
+              </div>
+
+              <div class="text-center mt-3">
+                <a href="#" class="text-decoration-none text-light" onclick="showScreen('landingScreen')">
+                  <i class="bi bi-arrow-left me-1"></i>Volver al inicio
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FORGOT -->
   <section id="forgotScreen" class="screen">
     <div class="auth-wrapper">
       <div class="container" style="max-width: 500px;">
@@ -422,7 +507,6 @@
     </div>
   </section>
 
-  <!-- HOME -->
   <section id="homeScreen" class="screen">
     <nav class="navbar navbar-expand-lg navbar-dark topbar sticky-top">
       <div class="container">
@@ -491,7 +575,6 @@
     </main>
   </section>
 
-  <!-- MODAL -->
   <div class="modal fade" id="tournamentModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content text-white">
@@ -553,4 +636,5 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/app.js"></script>
 </body>
+
 </html>
