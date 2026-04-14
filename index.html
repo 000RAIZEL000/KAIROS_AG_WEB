@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kairos AG - Prototipo Web</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <!-- LANDING -->
+  <section id="landingScreen" class="screen active">
+    <nav class="navbar navbar-expand-lg navbar-dark topbar sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">
+          <i class="bi bi-trophy-fill text-info me-2"></i>Kairos AG
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto me-3">
+            <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#beneficios">Beneficios</a></li>
+            <li class="nav-item"><a class="nav-link" href="#torneos">Torneos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+          </ul>
+          <div class="d-flex gap-2">
+            <button class="btn btn-outline-light btn-sm" onclick="showScreen('loginScreen')">Iniciar sesión</button>
+            <button class="btn btn-kairos btn-sm" onclick="showScreen('registerScreen')">Registrarse</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <header id="inicio" class="hero-section">
+      <div class="container py-5">
+        <div class="row align-items-center g-4 min-vh-75">
+          <div class="col-lg-6">
+            <span class="hero-badge">Gestión deportiva moderna</span>
+            <h1 class="display-4 fw-800 mt-3 mb-3">
+              Organiza campeonatos de forma profesional y desde cualquier lugar
+            </h1>
+            <p class="lead muted mb-4">
+              Kairos AG te permite administrar torneos, participantes, estados, fechas y seguimiento
+              en una plataforma clara, rápida y pensada para eventos deportivos.
+            </p>
+            <div class="d-flex flex-wrap gap-3">
+              <button class="btn btn-kairos btn-lg" onclick="showScreen('registerScreen')">
+                <i class="bi bi-rocket-takeoff me-2"></i>Comenzar ahora
+              </button>
+              <button class="btn btn-outline-light btn-lg" onclick="showScreen('loginScreen')">
+                <i class="bi bi-box-arrow-in-right me-2"></i>Ya tengo cuenta
+              </button>
+            </div>
+
+            <div class="row g-3 mt-4">
+              <div class="col-6 col-md-4">
+                <div class="mini-stat">
+                  <h4 class="fw-bold mb-1">+120</h4>
+                  <small class="muted">Torneos creados</small>
+                </div>
+              </div>
+              <div class="col-6 col-md-4">
+                <div class="mini-stat">
+                  <h4 class="fw-bold mb-1">+3K</h4>
+                  <small class="muted">Jugadores</small>
+                </div>
+              </div>
+              <div class="col-6 col-md-4">
+                <div class="mini-stat">
+                  <h4 class="fw-bold mb-1">24/7</h4>
+                  <small class="muted">Disponibilidad</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="hero-card">
+              <div class="hero-card-header d-flex justify-content-between align-items-center mb-3">
+                <span class="chip"><i class="bi bi-shield-check"></i> Plataforma segura</span>
+                <span class="chip"><i class="bi bi-lightning-charge"></i> Tiempo real</span>
+              </div>
+
+              <div class="dashboard-preview">
+                <div class="preview-top mb-3">
+                  <h5 class="fw-bold mb-1">Panel de campeonatos</h5>
+                  <p class="muted mb-0">Visualiza estados, equipos y progreso del evento.</p>
+                </div>
+
+                <div class="preview-card mb-3">
+                  <div class="d-flex justify-content-between">
+                    <div>
+                      <h6 class="fw-bold mb-1">Copa Kairos 2026</h6>
+                      <small class="muted">Fútbol · Mixto</small>
+                    </div>
+                    <span class="chip status-activo">Activo</span>
+                  </div>
+                </div>
+
+                <div class="preview-card mb-3">
+                  <div class="d-flex justify-content-between">
+                    <div>
+                      <h6 class="fw-bold mb-1">Liga Urbana</h6>
+                      <small class="muted">Baloncesto · Masculino</small>
+                    </div>
+                    <span class="chip status-pendiente">Pendiente</span>
+                  </div>
+                </div>
+
+                <div class="row g-3">
+                  <div class="col-6">
+                    <div class="stats-card">
+                      <small class="muted">Equipos</small>
+                      <h4 class="fw-bold mt-2 mb-0">48</h4>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="stats-card">
+                      <small class="muted">Partidos</small>
+                      <h4 class="fw-bold mt-2 mb-0">96</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </header>
+
+    <section id="beneficios" class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="fw-800">¿Qué puedes hacer con Kairos AG?</h2>
+          <p class="muted mb-0">Todo lo necesario para gestionar tus torneos en una sola plataforma.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-xl-3">
+            <div class="feature-card h-100">
+              <div class="feature-icon"><i class="bi bi-trophy"></i></div>
+              <h5 class="fw-bold">Crear campeonatos</h5>
+              <p class="muted mb-0">Registra torneos con nombre, deporte, modalidad, fechas y ubicación.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xl-3">
+            <div class="feature-card h-100">
+              <div class="feature-icon"><i class="bi bi-people"></i></div>
+              <h5 class="fw-bold">Gestionar participantes</h5>
+              <p class="muted mb-0">Administra equipos, jugadores y categorías de forma organizada.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xl-3">
+            <div class="feature-card h-100">
+              <div class="feature-icon"><i class="bi bi-graph-up-arrow"></i></div>
+              <h5 class="fw-bold">Ver seguimiento</h5>
+              <p class="muted mb-0">Consulta el estado de tus campeonatos y mantén todo actualizado.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xl-3">
+            <div class="feature-card h-100">
+              <div class="feature-icon"><i class="bi bi-phone"></i></div>
+              <h5 class="fw-bold">Acceder desde web</h5>
+              <p class="muted mb-0">Usa la plataforma desde laptop, tablet o celular sin complicaciones.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="torneos" class="py-5 section-soft">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4">
+          <div>
+            <h2 class="fw-800 mb-1">Torneos destacados</h2>
+            <p class="muted mb-0">Ejemplos de campeonatos que puedes administrar.</p>
+          </div>
+          <button class="btn btn-kairos" onclick="showScreen('registerScreen')">
+            Crear mi torneo
+          </button>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-xl-4">
+            <div class="tournament-card">
+              <div class="d-flex justify-content-between align-items-start mb-3">
+                <div>
+                  <h5 class="fw-bold mb-1">Copa Kairos 2026</h5>
+                  <small class="muted">Bogotá · Coliseo Central</small>
+                </div>
+                <span class="chip status-activo">Activo</span>
+              </div>
+              <p class="muted">Competencia principal con fase de grupos y eliminación directa.</p>
+              <div class="d-flex gap-2 flex-wrap">
+                <span class="chip"><i class="bi bi-dribbble"></i>Fútbol</span>
+                <span class="chip"><i class="bi bi-people"></i>Mixto</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xl-4">
+            <div class="tournament-card">
+              <div class="d-flex justify-content-between align-items-start mb-3">
+                <div>
+                  <h5 class="fw-bold mb-1">Liga Urbana</h5>
+                  <small class="muted">Medellín · Unidad Deportiva</small>
+                </div>
+                <span class="chip status-pendiente">Pendiente</span>
+              </div>
+              <p class="muted">Torneo orientado a clubes locales con estructura modular.</p>
+              <div class="d-flex gap-2 flex-wrap">
+                <span class="chip"><i class="bi bi-dribbble"></i>Baloncesto</span>
+                <span class="chip"><i class="bi bi-people"></i>Masculino</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xl-4">
+            <div class="tournament-card">
+              <div class="d-flex justify-content-between align-items-start mb-3">
+                <div>
+                  <h5 class="fw-bold mb-1">Festival Deportivo</h5>
+                  <small class="muted">Cali · Polideportivo Sur</small>
+                </div>
+                <span class="chip status-finalizado">Finalizado</span>
+              </div>
+              <p class="muted">Evento multideportivo con participación juvenil e intercolegial.</p>
+              <div class="d-flex gap-2 flex-wrap">
+                <span class="chip"><i class="bi bi-dribbble"></i>Voleibol</span>
+                <span class="chip"><i class="bi bi-people"></i>Femenino</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5">
+      <div class="container">
+        <div class="cta-box text-center">
+          <h2 class="fw-800 mb-3">Empieza a gestionar tus campeonatos hoy</h2>
+          <p class="muted mb-4">
+            Centraliza la información de tus eventos y trabaja con una interfaz clara y profesional.
+          </p>
+          <div class="d-flex justify-content-center gap-3 flex-wrap">
+            <button class="btn btn-kairos btn-lg" onclick="showScreen('registerScreen')">Crear cuenta</button>
+            <button class="btn btn-outline-light btn-lg" onclick="showScreen('loginScreen')">Ingresar</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="contacto" class="footer-section">
+      <div class="container py-4">
+        <div class="row g-4">
+          <div class="col-md-6">
+            <h5 class="fw-bold">Kairos AG</h5>
+            <p class="muted mb-0">Solución web para la gestión deportiva y organización de torneos.</p>
+          </div>
+          <div class="col-md-3">
+            <h6 class="fw-bold">Acceso</h6>
+            <ul class="list-unstyled mb-0">
+              <li><a href="#" onclick="showScreen('loginScreen')" class="footer-link">Iniciar sesión</a></li>
+              <li><a href="#" onclick="showScreen('registerScreen')" class="footer-link">Registrarse</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h6 class="fw-bold">Contacto</h6>
+            <ul class="list-unstyled mb-0">
+              <li class="muted">soporte@kairosag.com</li>
+              <li class="muted">+57 300 000 0000</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </section>
+
+  <!-- LOGIN -->
+  <section id="loginScreen" class="screen">
+    <div class="auth-wrapper">
+      <div class="container" style="max-width: 520px;">
+        <div class="glass-card p-4 p-md-5">
+          <div class="text-center mb-4">
+            <div class="brand-icon"><i class="bi bi-box-arrow-in-right"></i></div>
+            <h1 class="fw-800 mb-2">Iniciar sesión</h1>
+            <p class="muted mb-0">Accede a tu panel de gestión</p>
+          </div>
+
+          <form id="loginForm">
+            <div class="mb-3">
+              <label class="form-label">Correo electrónico</label>
+              <div class="input-group">
+                <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                <input type="email" class="form-control" id="loginEmail" placeholder="correo@ejemplo.com" required>
+              </div>
+            </div>
+
+            <div class="mb-2">
+              <label class="form-label">Contraseña</label>
+              <div class="input-group">
+                <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                <input type="password" class="form-control" id="loginPassword" placeholder="Tu contraseña" required>
+                <button class="btn btn-outline-secondary" type="button" onclick="togglePassword('loginPassword', this)">
+                  <i class="bi bi-eye"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="text-end mb-4">
+              <a href="#" class="text-info text-decoration-none small" onclick="showScreen('forgotScreen')">¿Olvidaste tu contraseña?</a>
+            </div>
+
+            <button class="btn btn-kairos w-100" type="submit">Iniciar sesión</button>
+          </form>
+
+          <div class="text-center mt-4">
+            <span class="muted">¿No tienes cuenta?</span>
+            <a href="#" class="text-info text-decoration-none fw-semibold" onclick="showScreen('registerScreen')"> Crear cuenta</a>
+          </div>
+
+          <div class="text-center mt-3">
+            <a href="#" class="text-decoration-none text-light" onclick="showScreen('landingScreen')">
+              <i class="bi bi-arrow-left me-1"></i>Volver al inicio
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REGISTER -->
+  <section id="registerScreen" class="screen">
+    <div class="auth-wrapper">
+      <div class="container" style="max-width: 560px;">
+        <div class="glass-card p-4 p-md-5">
+          <div class="text-center mb-4">
+            <div class="brand-icon"><i class="bi bi-person-plus"></i></div>
+            <h2 class="fw-800 mb-2">Crear cuenta</h2>
+            <p class="muted mb-0">Regístrate para administrar campeonatos</p>
+          </div>
+
+          <form id="registerForm">
+            <div class="row g-3">
+              <div class="col-12">
+                <label class="form-label">Nombre completo</label>
+                <input type="text" class="form-control" id="registerNombre" placeholder="Tu nombre" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Correo</label>
+                <input type="email" class="form-control" id="registerEmail" placeholder="correo@ejemplo.com" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Teléfono</label>
+                <input type="text" class="form-control" id="registerTelefono" placeholder="3001234567">
+              </div>
+              <div class="col-12">
+                <label class="form-label">Contraseña</label>
+                <div class="input-group">
+                  <input type="password" class="form-control" id="registerPassword" placeholder="Mínimo 6 caracteres" required>
+                  <button class="btn btn-outline-secondary" type="button" onclick="togglePassword('registerPassword', this)">
+                    <i class="bi bi-eye"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <button class="btn btn-kairos w-100 mt-4" type="submit">Registrarme</button>
+          </form>
+
+          <div class="text-center mt-4">
+            <span class="muted">¿Ya tienes cuenta?</span>
+            <a href="#" class="text-info text-decoration-none fw-semibold" onclick="showScreen('loginScreen')"> Iniciar sesión</a>
+          </div>
+
+          <div class="text-center mt-3">
+            <a href="#" class="text-decoration-none text-light" onclick="showScreen('landingScreen')">
+              <i class="bi bi-arrow-left me-1"></i>Volver al inicio
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORGOT -->
+  <section id="forgotScreen" class="screen">
+    <div class="auth-wrapper">
+      <div class="container" style="max-width: 500px;">
+        <div class="glass-card p-4 p-md-5">
+          <div class="text-center mb-4">
+            <div class="brand-icon"><i class="bi bi-key"></i></div>
+            <h2 class="fw-800 mb-2">Recuperar acceso</h2>
+            <p class="muted mb-0">Te enviaremos instrucciones a tu correo</p>
+          </div>
+
+          <form id="forgotForm">
+            <div class="mb-4">
+              <label class="form-label">Correo electrónico</label>
+              <input type="email" class="form-control" id="forgotEmail" placeholder="correo@ejemplo.com" required>
+            </div>
+            <button class="btn btn-kairos w-100" type="submit">Enviar instrucciones</button>
+          </form>
+
+          <div class="text-center mt-3">
+            <a href="#" class="text-decoration-none text-light" onclick="showScreen('loginScreen')">
+              <i class="bi bi-arrow-left me-1"></i>Volver al login
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOME -->
+  <section id="homeScreen" class="screen">
+    <nav class="navbar navbar-expand-lg navbar-dark topbar sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">
+          <i class="bi bi-trophy-fill text-info me-2"></i>Kairos AG
+        </a>
+        <div class="d-flex align-items-center gap-3 ms-auto">
+          <span class="role-pill" id="roleBadge">USER</span>
+          <button class="btn btn-outline-light btn-sm" onclick="logout()">
+            <i class="bi bi-box-arrow-right me-1"></i>Salir
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container py-5">
+      <div class="hero-box mb-4">
+        <div class="d-flex flex-column flex-lg-row justify-content-between align-items-lg-center gap-3">
+          <div>
+            <h2 class="section-title mb-1">Hola, <span id="userName">Usuario</span></h2>
+            <p class="muted mb-0">Administra torneos, consulta estados y crea nuevos campeonatos.</p>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-outline-info" onclick="loadTournaments()">
+              <i class="bi bi-arrow-clockwise me-1"></i>Actualizar
+            </button>
+            <button class="btn btn-kairos" data-bs-toggle="modal" data-bs-target="#tournamentModal">
+              <i class="bi bi-plus-circle me-1"></i>Nuevo campeonato
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="alertBox" class="mb-4"></div>
+
+      <div class="row g-4 mb-4">
+        <div class="col-md-4">
+          <div class="stats-card">
+            <small class="muted">Total campeonatos</small>
+            <h3 class="fw-bold mt-2 mb-0" id="totalCount">0</h3>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="stats-card">
+            <small class="muted">Deportes activos</small>
+            <h3 class="fw-bold mt-2 mb-0" id="sportsCount">0</h3>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="stats-card">
+            <small class="muted">Estado principal</small>
+            <h3 class="fw-bold mt-2 mb-0">Operativo</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h4 class="mb-0 fw-bold">Campeonatos</h4>
+      </div>
+
+      <div id="tournamentList" class="row g-4"></div>
+      <div id="emptyState" class="empty-state mt-3 d-none">
+        <i class="bi bi-emoji-frown fs-1 d-block mb-3"></i>
+        No hay campeonatos disponibles.
+      </div>
+    </main>
+  </section>
+
+  <!-- MODAL -->
+  <div class="modal fade" id="tournamentModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content text-white">
+        <div class="modal-header border-secondary">
+          <h5 class="modal-title">Nuevo campeonato</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+
+        <form id="tournamentForm">
+          <div class="modal-body">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="torneoNombre" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Deporte</label>
+                <input type="text" class="form-control" id="torneoDeporte" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Modalidad</label>
+                <input type="text" class="form-control" id="torneoModalidad" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Estado</label>
+                <select class="form-select" id="torneoEstado">
+                  <option value="Activo">Activo</option>
+                  <option value="Pendiente">Pendiente</option>
+                  <option value="Finalizado">Finalizado</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Fecha de inicio</label>
+                <input type="date" class="form-control" id="torneoInicio">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Fecha de fin</label>
+                <input type="date" class="form-control" id="torneoFin">
+              </div>
+              <div class="col-12">
+                <label class="form-label">Dirección</label>
+                <input type="text" class="form-control" id="torneoDireccion">
+              </div>
+              <div class="col-12">
+                <label class="form-label">Descripción</label>
+                <textarea class="form-control" id="torneoDescripcion" rows="3"></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer border-secondary">
+            <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-kairos">Guardar campeonato</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

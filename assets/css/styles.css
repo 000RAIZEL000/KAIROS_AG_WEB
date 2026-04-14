@@ -1,0 +1,263 @@
+:root {
+    --bg-1: #0f172a;
+    --bg-2: #1e293b;
+    --accent: #38bdf8;
+    --accent-2: #22d3ee;
+    --text: #f8fafc;
+    --muted: #94a3b8;
+    --glass: rgba(255, 255, 255, .06);
+    --glass-border: rgba(255, 255, 255, .10);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at top left, rgba(56, 189, 248, .16), transparent 25%),
+        radial-gradient(circle at bottom right, rgba(34, 211, 238, .10), transparent 20%),
+        linear-gradient(135deg, var(--bg-1), var(--bg-2));
+    color: var(--text);
+    font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+.screen {
+    display: none;
+}
+
+.screen.active {
+    display: block;
+}
+
+.min-vh-75 {
+    min-height: 75vh;
+}
+
+.topbar {
+    background: rgba(15, 23, 42, .78);
+    border-bottom: 1px solid rgba(255, 255, 255, .08);
+    backdrop-filter: blur(12px);
+}
+
+.hero-section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.hero-badge {
+    display: inline-block;
+    padding: .5rem .95rem;
+    border-radius: 999px;
+    font-size: .9rem;
+    font-weight: 700;
+    color: #7dd3fc;
+    background: rgba(56, 189, 248, .12);
+    border: 1px solid rgba(56, 189, 248, .2);
+}
+
+.hero-card,
+.glass-card,
+.feature-card,
+.stats-card,
+.tournament-card,
+.cta-box,
+.mini-stat {
+    background: rgba(255, 255, 255, .05);
+    border: 1px solid rgba(255, 255, 255, .08);
+    border-radius: 1.25rem;
+    box-shadow: 0 .75rem 1.5rem rgba(0, 0, 0, .12);
+}
+
+.hero-card,
+.glass-card,
+.cta-box {
+    padding: 1.5rem;
+}
+
+.dashboard-preview .preview-card,
+.mini-stat {
+    padding: 1rem;
+    background: rgba(255, 255, 255, .04);
+    border: 1px solid rgba(255, 255, 255, .06);
+    border-radius: 1rem;
+}
+
+.feature-card {
+    padding: 1.4rem;
+    transition: .2s ease;
+}
+
+.feature-card:hover,
+.tournament-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .16);
+}
+
+.feature-icon,
+.brand-icon {
+    width: 72px;
+    height: 72px;
+    display: grid;
+    place-items: center;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    color: var(--accent);
+    background: rgba(255, 255, 255, .08);
+    border: 1px solid rgba(255, 255, 255, .1);
+}
+
+.brand-icon {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-control,
+.form-select,
+textarea.form-control {
+    min-height: 50px;
+    background: rgba(15, 23, 42, .76);
+    border: 1px solid rgba(255, 255, 255, .08);
+    color: white;
+}
+
+.form-control::placeholder {
+    color: #9db0c7;
+}
+
+.form-control:focus,
+.form-select:focus,
+textarea.form-control:focus {
+    background: rgba(15, 23, 42, .92);
+    color: white;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 .25rem rgba(56, 189, 248, .18);
+}
+
+.input-group-text {
+    background: rgba(15, 23, 42, .9);
+    color: var(--accent);
+    border: 1px solid rgba(255, 255, 255, .08);
+}
+
+.btn-kairos {
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    border: 0;
+    color: #082f49;
+    font-weight: 800;
+    border-radius: 14px;
+}
+
+.btn-kairos:hover {
+    color: #082f49;
+    opacity: .96;
+    transform: translateY(-1px);
+}
+
+.muted {
+    color: var(--muted);
+}
+
+.section-soft {
+    background: rgba(255, 255, 255, .025);
+}
+
+.chip {
+    display: inline-flex;
+    align-items: center;
+    gap: .35rem;
+    padding: .38rem .75rem;
+    border-radius: 999px;
+    font-size: .82rem;
+    background: rgba(255, 255, 255, .08);
+    color: #dbeafe;
+    border: 1px solid rgba(255, 255, 255, .08);
+}
+
+.status-activo {
+    background: rgba(34, 197, 94, .18);
+    color: #86efac;
+}
+
+.status-pendiente {
+    background: rgba(250, 204, 21, .16);
+    color: #fde68a;
+}
+
+.status-finalizado {
+    background: rgba(239, 68, 68, .16);
+    color: #fca5a5;
+}
+
+.auth-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+.role-pill {
+    background: rgba(56, 189, 248, .16);
+    border: 1px solid rgba(56, 189, 248, .24);
+    color: #7dd3fc;
+    border-radius: 999px;
+    padding: .5rem .9rem;
+    font-size: .8rem;
+    font-weight: 700;
+}
+
+.stats-card,
+.tournament-card {
+    padding: 1.25rem;
+    height: 100%;
+}
+
+.hero-box {
+    background: linear-gradient(120deg, rgba(56, 189, 248, .15), rgba(34, 211, 238, .08));
+    border: 1px solid rgba(255, 255, 255, .08);
+    border-radius: 1.4rem;
+    padding: 1.5rem;
+}
+
+.empty-state {
+    border: 1px dashed rgba(255, 255, 255, .14);
+    background: rgba(255, 255, 255, .03);
+    border-radius: 1.2rem;
+    text-align: center;
+    padding: 2rem;
+    color: var(--muted);
+}
+
+.custom-alert {
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, .08);
+    color: white;
+}
+
+.modal-content {
+    background: #0f172a;
+    border: 1px solid rgba(255, 255, 255, .08);
+    border-radius: 1.25rem;
+}
+
+.footer-section {
+    border-top: 1px solid rgba(255, 255, 255, .08);
+    background: rgba(255, 255, 255, .03);
+}
+
+.footer-link {
+    color: #cbd5e1;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    color: white;
+}
+
+.section-title,
+.fw-800 {
+    font-weight: 800;
+}
