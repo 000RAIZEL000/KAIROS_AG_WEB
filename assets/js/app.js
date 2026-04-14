@@ -23,7 +23,7 @@ function showAlert(message, type = "info") {
     box.innerHTML = `
     <div class="alert alert-${type} custom-alert alert-dismissible fade show" role="alert">
       ${message}
-      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert"></button>
+      <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
     </div>
   `;
 }
@@ -227,7 +227,7 @@ function renderTournaments() {
             <h5 class="fw-bold mb-1">${item.nombre}</h5>
             <span class="chip ${getStatusClass(item.estado)}">${item.estado || "Activo"}</span>
           </div>
-          <div class="text-info fs-4"><i class="bi bi-trophy"></i></div>
+          <div class="fs-4" style="color:#166534;"><i class="bi bi-trophy"></i></div>
         </div>
 
         <div class="d-flex flex-wrap gap-2 mb-3">
@@ -243,7 +243,7 @@ function renderTournaments() {
         </div>
 
         <div class="d-flex gap-2">
-          <button class="btn btn-outline-info btn-sm flex-fill">Ver detalle</button>
+          <button class="btn btn-outline-kairos btn-sm flex-fill">Ver detalle</button>
         </div>
       </div>
     `;
